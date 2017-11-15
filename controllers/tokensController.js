@@ -1,17 +1,22 @@
+const path = require('path');
+const Tokens = require(path.resolve(path.dirname(__dirname), 'modules/tokens'));
+
 module.exports = {
   show: function(req, res) {
     const token = req.params.token;
 
-    // TODO: check with Prefixy that token is valid and redirect if invalid
+    try {
+      Tokens.validate(token);
+    } catch(e) {
+      res.redirect('/');
+      return;
+    }
 
     res.render('token', { token });
   },
 
   create: function(req, res) {
-    // TODO: send request to prefixy to get new token
-
-    // temporarily hard coded
-    const token = 'tenant';
+    const token = Tokens.generate();
 
     res.redirect('/tokens/' + token);
   }
