@@ -1,9 +1,12 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    block head
+      title= title
+      link(rel="stylesheet" href="/stylesheets/style.css")
+      script(src="https://use.fontawesome.com/021fa0715f.js")
   body
-    include partials/_nav
-    block content
-    include partials/_foot
+    block body
+      include partials/_nav
+      block content
+      block include partials/_foot

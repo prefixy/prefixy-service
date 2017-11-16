@@ -1,5 +1,8 @@
 extends layout
 
+append head
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css")
+
 block content
   h2 And your token is...
   textarea(readonly rows="1" cols="50") xYgZf0s8sXs90px3
@@ -9,14 +12,14 @@ block content
   p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
 
   pre
-    code &lt;script src=&quot;https://prefixy.io/autocomplete.js&quot;&gt;
+    code(class="language-js") &lt;script src=&quot;https://prefixy.io/autocomplete.js&quot;&gt;
 
   pre
-    code &lt;script&gt;new PrefixyComplete(xYgZf0s8sXs90px3);&lt;/script&gt;
+    code(class="language-js") &lt;script&gt;new PrefixyComplete(xYgZf0s8sXs90px3);&lt;/script&gt;
 
   h3 Example file
   pre
-    code
+    code(class="language-js")
       | &lt;html&gt;
       |   &lt;body&gt;
       |
@@ -33,7 +36,7 @@ block content
   h2 Okay, what if I want custom options?
   p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
   pre
-    code
+    code(class="language-js")
       | &lt;script&gt;
       |   const opts = {
       |     token: token,
@@ -59,3 +62,6 @@ block content
       target="_blank"
       href="https://github.com/jayshenk/prefixy/tree/master/docs"
     )  documentation on github here.
+
+append body
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js")
