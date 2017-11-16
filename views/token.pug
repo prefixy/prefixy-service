@@ -5,7 +5,7 @@ append head
 
 block content
   h2 And your token is...
-  textarea(readonly rows="1" cols="50") xYgZf0s8sXs90px3
+  textarea(readonly rows="1" cols="50")= token
   small Don't lose this token, and remember to bookmark this page in case you need to come back.
 
   h2 How do I use this?
@@ -15,7 +15,7 @@ block content
     code(class="language-js") &lt;script src=&quot;https://prefixy.io/autocomplete.js&quot;&gt;
 
   pre
-    code(class="language-js") &lt;script&gt;new PrefixyComplete(xYgZf0s8sXs90px3);&lt;/script&gt;
+    code(class="language-js") &lt;script&gt;new PrefixyComplete(#{token});&lt;/script&gt;
 
   h3 Example file
   pre
@@ -28,7 +28,7 @@ block content
       |
       |     &lt;script src=&quot;https://prefixy.io/autocomplete.js&quot;&gt;
       |     &lt;script&gt;
-      |       new PrefixyComplete(token);
+      |       new PrefixyComplete(#{token});
       |     &lt;/script&gt;
       |   &lt;body&gt;
       | &lt;/html&gt;
@@ -39,7 +39,7 @@ block content
     code(class="language-js")
       | &lt;script&gt;
       |   const opts = {
-      |     token: token,
+      |     token: "#{token}",
       |     suggestionCount: 10
       |     minChars: 3,
       |     delay: 150
