@@ -61,6 +61,10 @@ PrefixyComplete.prototype.draw = function() {
     var selected = this.suggestions[this.bestSuggestionIndex];
     var inputText = this.input.value;
     this.overlay.textContent = inputText + selected.slice(inputText.length);
+
+    if (inputText.match(/\s{2}/)) {
+      this.overlay.textContent = '';
+    }
   } else {
     this.overlay.textContent = '';
   }
