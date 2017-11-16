@@ -22,7 +22,8 @@
 }
 
 .autocomplete-ui-choice {
-  padding: 5px;
+  text-align: left;
+  padding: .67857143em 1em;
   border-bottom: solid 1px #ddd;
 }
 

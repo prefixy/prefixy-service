@@ -7,3 +7,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+.large.text {
+   font-size: 1.4rem;
+}
+
+.italicized {
+  font-style: italic;
+}
+
+@media(min-width: 500px)
