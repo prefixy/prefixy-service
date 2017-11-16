@@ -5,20 +5,23 @@ append head
 
 block content
   main(class="ui text container")
+    div(class="ui hidden divider")
     h2(class="ui centered header") And your token is...
     textarea(readonly rows="1" cols="50")= token
     small Don't lose this token, and remember to bookmark this page in case you need to come back.
+    div(class="ui hidden divider")
 
     h2(class="ui centered header") How do I use this?
     p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
-
+    div(class="ui hidden divider")
     pre
       code(class="language-js") &lt;script src=&quot;https://prefixy.io/autocomplete.js&quot;&gt;
-
     pre
       code(class="language-js") &lt;script&gt;new PrefixyComplete(#{token});&lt;/script&gt;
+    div(class="ui hidden divider")
 
     h3 Example file
+    div(class="ui hidden divider")
     pre
       code(class="language-js")
         | &lt;html&gt;
@@ -33,9 +36,11 @@ block content
         |     &lt;/script&gt;
         |   &lt;body&gt;
         | &lt;/html&gt;
+    div(class="ui hidden divider")
 
     h2 Okay, what if I want custom options?
     p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
+    div(class="ui hidden divider")
     pre
       code(class="language-js")
         | &lt;script&gt;
@@ -48,6 +53,7 @@ block content
         |
         |   new PrefixyComplete(opts);
         | &lt;/script&gt;
+    div(class="ui hidden divider")
     h3 Supported options
     dl
       dt suggestionCount
@@ -56,6 +62,7 @@ block content
       dd this does blah blah
       dt delay
       dd this does blah blah blah
+    div(class="ui hidden divider")
 
     h2 You're all set!
     p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. If you need more help, see our
@@ -63,6 +70,7 @@ block content
         target="_blank"
         href="https://github.com/jayshenk/prefixy/tree/master/docs"
       )  documentation on github here.
+    div(class="ui hidden divider")
 
 append body
   script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js")
