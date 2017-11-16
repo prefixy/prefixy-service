@@ -1,4 +1,5 @@
 node_modules/
 prefixy-service-config.json
+public/vendor/*
 
 .DS_Store

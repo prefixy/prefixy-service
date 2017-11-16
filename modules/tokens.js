@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 
 const CONFIG_FILE = path.resolve(path.dirname(__dirname), "prefixy-service-config.json");
 const { secret, demoTenant } = JSON.parse(fs.readFileSync(CONFIG_FILE, "utf8"));
-const demoToken = jwt.sign({ demoTenant }, secret);
+const demoToken = jwt.sign({ tenant: demoTenant }, secret);
 
 module.exports = {
   demoToken,

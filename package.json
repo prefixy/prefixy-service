@@ -11,11 +11,12 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "jsonwebtoken": "^8.1.0",
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2",
     "randomstring": "^1.1.5",
-    "jsonwebtoken": "^8.1.0"
+    "semantic-ui": "^2.2.13",
+    "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"

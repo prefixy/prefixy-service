@@ -4,9 +4,16 @@ html
     block head
       title= title
       link(rel="stylesheet" href="/stylesheets/style.css")
-      script(src="https://use.fontawesome.com/021fa0715f.js")
-  body
+      link(rel="stylesheet" href="/vendor/semantic/dist/semantic.min.css")
+  body(class="ui container")
     block body
       include partials/_nav
       block content
       include partials/_foot
+
+      script(
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"
+      )
+      script(src="/vendor/semantic/dist/semantic.min.js")

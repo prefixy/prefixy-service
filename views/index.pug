@@ -1,5 +1,8 @@
 extends layout
 
+append head
+  link(rel="stylesheet" href="/stylesheets/autocomplete.css")
+
 block menu
   nav(class="ui secondary pointing menu")
     a(class="item active" href="/") Home
@@ -14,50 +17,62 @@ block menu
       input(class="ui primary basic button" type="submit" value="Auto-generate now!")
 
 block content
-  h1(class="ui centered header") Prefixy
-  p(class="ui text container") Aliquam placerat sem non tortor condimentum finibus. Cras vehicula tempus velit, in placerat sapien. Cras fermentum ex nulla, ac aliquet metus porttitor nec. Quisque nisl urna, ornare sollicitudin dolor ut, pretium convallis nunc. Aenean volutpat nulla libero, ac finibus tortor iaculis sit amet. Ut fermentum hendrerit dignissim. Praesent quis sem a ipsum lobortis luctus hendrerit sit amet dolor. Fusce venenatis ullamcorper condimentum. Morbi tellus tellus, maximus in varius quis, sollicitudin non mauris. Duis faucibus sagittis posuere.
-  form(class="ui center aligned container")
-    div(class="ui labeled input")
-      div(class="ui label") Demo:
-      input(type="text" placeholder="Start typing...")
+  main(class="ui text container")
+    h1(class="ui centered header") Prefixy
+    p Aliquam placerat sem non tortor condimentum finibus. Cras vehicula tempus velit, in placerat sapien. Cras fermentum ex nulla, ac aliquet metus porttitor nec. Quisque nisl urna, ornare sollicitudin dolor ut, pretium convallis nunc. Aenean volutpat nulla libero, ac finibus tortor iaculis sit amet. Ut fermentum hendrerit dignissim. Praesent quis sem a ipsum lobortis luctus hendrerit sit amet dolor. Fusce venenatis ullamcorper condimentum. Morbi tellus tellus, maximus in varius quis, sollicitudin non mauris. Duis faucibus sagittis posuere.
+    form(class="ui center aligned container")
+      div(class="ui big input")
+        input(id="demo1" type="text" placeholder="Start typing...")
 
-  h2 What is this even?
-  p(class="ui text container") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-  p(class="ui text container") Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
-  form(
-    class="ui center aligned container"
-    method="post"
-    action="/tokens"
-  )
-    input(
-      class="big ui primary button"
-      type="submit"
-      value="Ready? 1-click auto-generate now")
+    h2 What is this even?
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
+    form(
+      class="ui center aligned container"
+      method="post"
+      action="/tokens"
+    )
+      input(
+        class="big ui primary button"
+        type="submit"
+        value="Ready? 1-click auto-generate now")
 
-  h2 Tell me the technical details&nbsp;
-    i(class="big code icon")
-  p(class="ui text container") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-  p(class="ui text container") Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
+    h2 Tell me the technical details&nbsp;
+      i(class="big code icon")
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
 
-  h2 Show me another demo
-  p(class="ui text container") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-  form(class="ui center aligned container")
-    div(class="ui input")
-      input(type="text" placeholder="Start typing...")
+    h2 Show me another demo
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    form(class="ui center aligned container")
+      div(class="ui big input")
+        input(id="demo2" type="text" placeholder="Start typing...")
 
 
-  h2 I want to do this myself&nbsp;
-  p(class="ui text container") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-  div(class="ui center aligned container")
-    a(
-      class="big ui button"
-      download
-      href="https://github.com/jayshenk/prefixy/archive/master.zip"
-    ) Download Zip
-    a(
-      class="big ui button"
-      target="_blank"
-      href="https://github.com/jayshenk/prefixy"
-    ) View Github
-    i(class="huge fork icon")
+    h2 I want to do this myself&nbsp;
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    div(class="ui center aligned container")
+      a(
+        class="big ui button"
+        download
+        href="https://github.com/jayshenk/prefixy/archive/master.zip"
+      ) Download Zip
+      a(
+        class="big ui button"
+        target="_blank"
+        href="https://github.com/jayshenk/prefixy"
+      ) View Github
+      i(class="huge fork icon")
 
+  script(src="/javascripts/debounce.js")
+  script(src="https://unpkg.com/axios/dist/axios.min.js")
+  script(src="/javascripts/prefixy-complete.js")
+  script.
+    const demoToken = "#{demoToken}";
+    const input1 = document.getElementById("demo1");
+    const url = "http://localhost:3001";
+    const opts = {
+      token: demoToken
+    };
+
+    new PrefixyComplete(input1, url, opts);
