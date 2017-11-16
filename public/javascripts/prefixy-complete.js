@@ -12,7 +12,7 @@ function PrefixyComplete(input, prefixyUrl, opts={}) {
 
   this.wrapInput();
   this.createUI();
-  this.valueChanged = debounce(this.valueChanged.bind(this), this.delay);
+  this.valueChanged = this.debounce(this.valueChanged.bind(this), this.delay);
   this.bindEvents();
 
   this.reset();
@@ -61,6 +61,10 @@ PrefixyComplete.prototype.draw = function() {
     var selected = this.suggestions[this.bestSuggestionIndex];
     var inputText = this.input.value;
     this.overlay.textContent = inputText + selected.slice(inputText.length);
+
+    if (inputText.match(/\s{2}/)) {
+      this.overlay.textContent = '';
+    }
   } else {
     this.overlay.textContent = '';
   }
@@ -167,5 +171,18 @@ PrefixyComplete.prototype.valueChanged = function() {
     }.bind(this));
   } else {
     this.reset();
+  }
+};
+
+PrefixyComplete.prototype.debounce = function(func, delay) {
+  var timeout;
+  return function() {
+    var args = arguments;
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(function() {
+      func.apply(null, args);
+    }, delay);
   }
 };
