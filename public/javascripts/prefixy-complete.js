@@ -34,6 +34,7 @@ PrefixyComplete.prototype.wrapInput = function() {
 
 PrefixyComplete.prototype.createUI = function() {
   var listUI = document.createElement('ul');
+  listUI.style.top = this.input.getBoundingClientRect().height + 'px';
   listUI.classList.add('autocomplete-ui');
   this.input.parentNode.appendChild(listUI);
   this.listUI = listUI;
@@ -41,6 +42,8 @@ PrefixyComplete.prototype.createUI = function() {
   var overlay = document.createElement('div');
   overlay.classList.add('autocomplete-overlay');
   overlay.style.width = this.input.clientWidth + 'px';
+  overlay.style.left = "2.125px";
+  overlay.style.top = "1.90625px";
 
   this.input.parentNode.appendChild(overlay);
   this.overlay = overlay;
