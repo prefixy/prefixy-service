@@ -19,6 +19,7 @@
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
     "randomstring": "^1.1.5",
+    "semantic": "0.0.1",
     "semantic-ui": "^2.2.13",
     "serve-favicon": "~2.4.2"
   },
