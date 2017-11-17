@@ -54,7 +54,17 @@
     "api",
     "form",
     "state",
-    "visibility"
+    "visibility",
+    "rail",
+    "breadcrumb",
+    "table",
+    "comment",
+    "feed",
+    "nag",
+    "popup",
+    "rating",
+    "shape",
+    "sticky"
   ],
   "version": "2.2.13"
 }
