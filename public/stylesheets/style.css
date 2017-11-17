@@ -16,4 +16,13 @@ a {
   font-style: italic;
 }
 
-@media(min-width: 500px)
+.ui.primary.basic.button {
+  position: absolute;
+  right: 50px;
+}
+
+@media (max-width: 600px) {
+  .ui.primary.basic.button {
+    display: none;
+  }
+}
