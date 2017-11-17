@@ -20,6 +20,7 @@ function PrefixyComplete(input, prefixyUrl, opts={}) {
 
 PrefixyComplete.prototype.bindEvents = function() {
   this.input.addEventListener('input', this.valueChanged.bind(this));
+  this.input.addEventListener('blur', this.handleBlur.bind(this));
   this.input.addEventListener('keydown', this.handleKeydown.bind(this));
   this.listUI.addEventListener('mousedown', this.handleMousedown.bind(this));
 };
@@ -42,8 +43,6 @@ PrefixyComplete.prototype.createUI = function() {
   var overlay = document.createElement('div');
   overlay.classList.add('autocomplete-overlay');
   overlay.style.width = this.input.clientWidth + 'px';
-  overlay.style.left = "2.125px";
-  overlay.style.top = "1.90625px";
 
   this.input.parentNode.appendChild(overlay);
   this.overlay = overlay;
@@ -150,6 +149,10 @@ PrefixyComplete.prototype.handleMousedown = function(event) {
     this.input.value = element.textContent;
     this.reset();
   }
+};
+
+PrefixyComplete.prototype.handleBlur = function() {
+  this.reset();
 };
 
 PrefixyComplete.prototype.reset = function(event) {
