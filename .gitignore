@@ -1,5 +1,3 @@
 node_modules/
-prefixy-service-config.json
-public/vendor/*
-
+.env
 .DS_Store
