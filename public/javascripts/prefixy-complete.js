@@ -28,7 +28,6 @@ PrefixyComplete.prototype.bindEvents = function() {
 PrefixyComplete.prototype.wrapInput = function() {
   var wrapper = document.createElement('div');
   wrapper.classList.add('autocomplete-wrapper');
-  wrapper.style.width = this.input.getBoundingClientRect().width + 'px';
   this.input.parentNode.insertBefore(wrapper, this.input);
   wrapper.appendChild(this.input);
 };
