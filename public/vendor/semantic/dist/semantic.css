@@ -5069,7 +5069,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 
 .ui.text.container {
-  font-size: 1.14285714rem;
+  font-size: 1.28571429rem;
 }
 
 /* Fluid */
@@ -10841,7 +10841,7 @@ img.ui.bordered.image {
   line-height: 1.21428571em;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   padding: 0.67857143em 1em;
-  background: #FFFFFF;
+  background: #f5f2f0;
   border: 1px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
@@ -10945,7 +10945,7 @@ img.ui.bordered.image {
 .ui.input.focus input,
 .ui.input input:focus {
   border-color: #85B7D9;
-  background: #FFFFFF;
+  background: #f5f2f0;
   color: rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -16265,8 +16265,8 @@ ol.ui.horizontal.list li:before,
   tap-highlight-color: rgba(255, 255, 255, 0);
   line-height: 1.21428571em;
   padding: 0.67857143em 1em;
-  font-size: 1em;
-  background: #FFFFFF;
+  font-size: 1.4em;
+  background: #f5f2f0;
   border: 1px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
@@ -16283,7 +16283,7 @@ ol.ui.horizontal.list li:before,
   -webkit-appearance: none;
   tap-highlight-color: rgba(255, 255, 255, 0);
   padding: 0.78571429em 1em;
-  background: #FFFFFF;
+  background: #f5f2f0;
   border: 1px solid rgba(34, 36, 38, 0.15);
   outline: none;
   color: rgba(0, 0, 0, 0.87);
@@ -16292,7 +16292,7 @@ ol.ui.horizontal.list li:before,
   box-shadow: 0em 0em 0em 0em transparent inset;
   -webkit-transition: color 0.1s ease, border-color 0.1s ease;
   transition: color 0.1s ease, border-color 0.1s ease;
-  font-size: 1em;
+  font-size: 1.4em;
   line-height: 1.2857;
   resize: vertical;
 }
@@ -16553,7 +16553,7 @@ ol.ui.horizontal.list li:before,
   color: rgba(0, 0, 0, 0.95);
   border-color: #85B7D9;
   border-radius: 0.28571429rem;
-  background: #FFFFFF;
+  background: #f5f2f0;
   -webkit-box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
   box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
 }
@@ -16562,7 +16562,7 @@ ol.ui.horizontal.list li:before,
   color: rgba(0, 0, 0, 0.95);
   border-color: #85B7D9;
   border-radius: 0.28571429rem;
-  background: #FFFFFF;
+  background: #f5f2f0;
   -webkit-box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
   box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
   -webkit-appearance: none;
@@ -16943,7 +16943,7 @@ ol.ui.horizontal.list li:before,
 .ui.inverted.form input[type="text"],
 .ui.inverted.form input[type="file"],
 .ui.inverted.form input[type="url"] {
-  background: #FFFFFF;
+  background: #f5f2f0;
   border-color: rgba(255, 255, 255, 0.1);
   color: rgba(0, 0, 0, 0.87);
   -webkit-box-shadow: none;
@@ -25659,7 +25659,7 @@ body.dimmable > .dimmer {
   transform: rotateZ(0deg);
   min-width: 14em;
   min-height: 2.71428571em;
-  background: #FFFFFF;
+  background: #f5f2f0;
   display: inline-block;
   padding: 0.78571429em 2.1em 0.78571429em 1em;
   color: rgba(0, 0, 0, 0.87);
@@ -28363,7 +28363,7 @@ select.ui.dropdown {
   line-height: 1.21428571em;
   padding: 0.67857143em 1em;
   font-size: 1em;
-  background: #FFFFFF;
+  background: #f5f2f0;
   border: 1px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
   -webkit-box-shadow: 0em 0em 0em 0em transparent inset;
@@ -28522,7 +28522,7 @@ select.ui.dropdown {
 
 .ui.search > .prompt:focus {
   border-color: rgba(34, 36, 38, 0.35);
-  background: #FFFFFF;
+  background: #f5f2f0;
   color: rgba(0, 0, 0, 0.95);
 }
 

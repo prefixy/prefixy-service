@@ -1,3 +1,5 @@
 /*******************************
      User Global Variables
 *******************************/
+
+@inputBackground: #f5f2f0;

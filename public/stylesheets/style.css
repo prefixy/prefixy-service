@@ -1,28 +1,26 @@
 body {
-  text-align: left;
   padding: 50px;
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.large.text {
-   font-size: 1.4rem;
 }
 
 .italicized {
   font-style: italic;
 }
 
-.ui.primary.basic.button {
+.positioned.right {
   position: absolute;
   right: 50px;
 }
 
-@media (max-width: 600px) {
-  .ui.primary.basic.button {
-    display: none;
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+  [class*="mobile hidden"],
+  [class*="tablet only"]:not(.mobile),
+  [class*="computer only"]:not(.mobile),
+  [class*="large monitor only"]:not(.mobile),
+  [class*="widescreen monitor only"]:not(.mobile),
+  [class*="or lower hidden"] {
+    display: none !important;
   }
 }

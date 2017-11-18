@@ -3,28 +3,20 @@ extends layout
 append head
   link(rel="stylesheet" href="/stylesheets/autocomplete.css")
 
-//- block menu
-//-   nav(class="ui secondary pointing menu")
-//-     a(class="item active" href="/") Home
-//-     a(class="item" href="/story") Story
-//-     a(class="item" href="/about") About Us
-//-     a(
-//-       class="item"
-//-       href="https://github.com/jayshenk/prefixy"
-//-       target="_blank"
-//-     ) Source
-    form(class="ui right menu" method="post" action="/tokens")
-      input(class="ui primary basic button" type="submit" value="Auto-generate now!")
 prepend body
-  form(method="post" action="/tokens")
-    input(class="ui primary basic button" type="submit" value="Auto-generate now!")
+  form(class="mobile hidden positioned right" method="post" action="/tokens")
+    input(
+      class="ui primary basic button"
+      type="submit"
+      value="Auto-generate now!"
+    )
 
 block content
   main(class="ui text container")
     div(class="ui hidden divider")
 
     h1(class="ui huge centered header") Prefixy
-    p(class="large text") Aliquam placerat sem non tortor condimentum finibus. Cras vehicula tempus velit, in placerat sapien. Cras fermentum ex nulla, ac aliquet metus porttitor nec. Quisque nisl urna, ornare sollicitudin dolor ut, pretium convallis nunc. Aenean volutpat nulla libero, ac finibus tortor iaculis sit amet. Ut fermentum hendrerit dignissim. Praesent quis sem a ipsum lobortis luctus hendrerit sit amet dolor. Fusce venenatis ullamcorper condimentum. Morbi tellus tellus, maximus in varius quis, sollicitudin non mauris. Duis faucibus sagittis posuere.
+    p Aliquam placerat sem non tortor condimentum finibus. Cras vehicula tempus velit, in placerat sapien. Cras fermentum ex nulla, ac aliquet metus porttitor nec. Quisque nisl urna, ornare sollicitudin dolor ut, pretium convallis nunc. Aenean volutpat nulla libero, ac finibus tortor iaculis sit amet. Ut fermentum hendrerit dignissim. Praesent quis sem a ipsum lobortis luctus hendrerit sit amet dolor. Fusce venenatis ullamcorper condimentum. Morbi tellus tellus, maximus in varius quis, sollicitudin non mauris. Duis faucibus sagittis posuere.
     div(class="ui hidden divider")
 
     form(class="ui center aligned container")
@@ -33,13 +25,12 @@ block content
           id="demo1"
           type="text"
           placeholder="Start typing..."
-          style="width: 100%"
         )
     div(class="ui hidden divider")
 
     h2 What is this even?
-    p(class="large text") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-    p(class="large text") Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
     div(class="ui hidden divider")
 
     form(
@@ -55,12 +46,12 @@ block content
 
     h2 Tell me the technical details&nbsp;
       i(class="big code icon")
-    p(class="large text") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-    p(class="large text") Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
     div(class="ui hidden divider")
 
     h2 Show me another demo
-    p(class="large text") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
     div(class="ui hidden divider")
 
     form(class="ui center aligned container")
@@ -69,12 +60,11 @@ block content
           id="demo2"
           type="text"
           placeholder="Start typing..."
-          style="width: 100%"
         )
     div(class="ui hidden divider")
 
     h2 I want to do this myself&nbsp;
-    p(class="large text") Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
     div(class="ui hidden divider")
 
     div(class="ui center aligned container")
