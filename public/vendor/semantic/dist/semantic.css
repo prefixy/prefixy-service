@@ -4947,6 +4947,22 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.basic.primary.buttons .button:hover,
+.ui.basic.primary.button:hover {
+  color: #fff !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #1678c2 inset !important;
+  box-shadow: 0px 0px 0px 1px #1678c2 inset !important;
+  background: #1678c2 !important;
+}
+
+.ui.basic.primary.buttons .button:focus,
+.ui.basic.primary.button:focus {
+  color: #fff !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #0d71bb inset !important;
+  box-shadow: 0px 0px 0px 1px #0d71bb inset !important;
+  background: #1678c2 !important;
+}
 /*!
  * # Semantic UI 2.2.13 - Container
  * http://github.com/semantic-org/semantic-ui/
@@ -21928,6 +21944,13 @@ Floated Menu / Item
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.secondary.pointing.menu a.item:hover,
+.ui.secondary.pointing.menu a.item:focus {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 700;
+}
 /*!
  * # Semantic UI 2.2.13 - Message
  * http://github.com/semantic-org/semantic-ui/

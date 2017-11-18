@@ -17,3 +17,7 @@ html
         crossorigin="anonymous"
       )
       script(src="/vendor/semantic/dist/semantic.min.js")
+      script.
+        const path = location.pathname;
+        const navItem = $(`a[href="${path}"]`);
+        navItem.addClass("active");
