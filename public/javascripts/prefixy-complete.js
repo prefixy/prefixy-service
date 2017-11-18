@@ -73,12 +73,22 @@ PrefixyComplete.prototype.draw = function() {
 
   this.suggestions.forEach(function(suggestion, index) {
     var li = document.createElement('li');
+    var span1 = document.createElement('span');
+    var span2 = document.createElement('span');
+    var typed = this.input.value.replace(/\s{2,}/, ' ');
+
     li.classList.add('autocomplete-ui-choice');
     if (index === this.selectedIndex) {
       li.classList.add('selected');
       this.input.value = suggestion;
     }
-    li.textContent = suggestion;
+
+    span1.classList.add('typed');
+    span1.textContent = suggestion.slice(0, typed.length);
+    span2.textContent = suggestion.slice(typed.length);
+
+    li.appendChild(span1);
+    li.appendChild(span2);
     this.listUI.appendChild(li);
   }.bind(this));
 };
