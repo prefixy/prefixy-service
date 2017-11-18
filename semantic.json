@@ -1,5 +1,5 @@
 {
-  "base": "public/vendor/semantic/",
+  "base": "/",
   "paths": {
     "source": {
       "config": "src/theme.config",

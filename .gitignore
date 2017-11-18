@@ -1,3 +1,4 @@
 node_modules/
+semantic/
 .env
 .DS_Store
