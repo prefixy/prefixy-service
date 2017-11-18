@@ -12,6 +12,11 @@ body {
   right: 50px;
 }
 
+.section.container {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
 /* Mobile */
 
 @media only screen and (max-width: 767px) {
