@@ -74,18 +74,24 @@ PrefixyComplete.prototype.draw = function() {
     var li = document.createElement('li');
     var span1 = document.createElement('span');
     var span2 = document.createElement('span');
-    var typed = this.input.value.replace(/\s{2,}/, ' ');
 
     li.classList.add('autocomplete-ui-choice');
+
     if (index === this.selectedIndex) {
       li.classList.add('selected');
       this.input.value = suggestion;
     }
 
+    const typed = this.input.value.replace(/\s{2,}/, ' ');
+
     span1.classList.add('suggestion', 'typed');
     span2.classList.add('suggestion');
-    span1.textContent = suggestion.slice(0, typed.length);
-    span2.textContent = suggestion.slice(typed.length);
+
+    // don't bold text if user navigating with arrow keys
+    if (this.selectedIndex === null) {
+      span1.textContent = suggestion.match(typed);
+    }
+    span2.textContent = suggestion.slice(span1.textContent.length);
 
     li.appendChild(span1);
     li.appendChild(span2);
