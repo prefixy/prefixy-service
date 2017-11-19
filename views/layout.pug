@@ -12,12 +12,12 @@ html
       block content
       include partials/_foot
 
-      script(
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"
-      )
+      //- script(
+      //-   src="https://code.jquery.com/jquery-3.1.1.min.js"
+      //-   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      //-   crossorigin="anonymous"
+      //- )
       script.
         const path = location.pathname;
-        const navItem = $(`a[href="${path}"]`);
-        navItem.addClass("active");
+        const navItem = document.querySelector(`a[href="${path}"]`);
+        navItem.className += " active";
