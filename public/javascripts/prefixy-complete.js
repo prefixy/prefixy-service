@@ -82,7 +82,8 @@ PrefixyComplete.prototype.draw = function() {
       this.input.value = suggestion;
     }
 
-    span1.classList.add('typed');
+    span1.classList.add('suggestion', 'typed');
+    span2.classList.add('suggestion');
     span1.textContent = suggestion.slice(0, typed.length);
     span2.textContent = suggestion.slice(typed.length);
 
@@ -154,6 +155,11 @@ PrefixyComplete.prototype.handleMousedown = function(event) {
   event.preventDefault();
 
   var element = event.target;
+
+  if (event.target.classList.contains('suggestion')) {
+    element = element.parentNode;
+  }
+
   if (element.classList.contains('autocomplete-ui-choice')) {
     this.input.value = element.textContent;
     this.reset();
