@@ -47,19 +47,3 @@
 .autocomplete-ui-choice .typed {
   font-weight: bold;
 }
-
-.autocomplete-overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  color: #999;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.autocomplete-overlay:empty {
-  display: none;
-}

@@ -9,7 +9,6 @@ function PrefixyComplete(input, prefixyUrl, opts={}) {
   this.minChars = opts.minChars || 1;
 
   this.listUI = null;
-  this.overlay = null;
 
   this.disableHtmlAutocomplete();
   this.wrapInput();
@@ -48,13 +47,6 @@ PrefixyComplete.prototype.createUI = function() {
   listUI.classList.add('autocomplete-ui');
   this.input.parentNode.appendChild(listUI);
   this.listUI = listUI;
-
-  var overlay = document.createElement('div');
-  overlay.classList.add('autocomplete-overlay');
-  overlay.style.width = this.input.clientWidth + 'px';
-
-  this.input.parentNode.appendChild(overlay);
-  this.overlay = overlay;
 };
 
 PrefixyComplete.prototype.draw = function() {
@@ -63,21 +55,9 @@ PrefixyComplete.prototype.draw = function() {
     this.listUI.removeChild(child);
   }
 
-  if (!this.visible) {
-    this.overlay.textContent = '';
-    return;
-  }
-
   if (this.bestSuggestionIndex !== null && this.suggestions.length) {
     var selected = this.suggestions[this.bestSuggestionIndex];
     var inputText = this.input.value;
-    this.overlay.textContent = inputText + selected.slice(inputText.length);
-
-    if (inputText.match(/\s{2}/)) {
-      this.overlay.textContent = '';
-    }
-  } else {
-    this.overlay.textContent = '';
   }
 
   this.suggestions.forEach(function(suggestion, index) {
