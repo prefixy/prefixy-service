@@ -63,7 +63,3 @@
 .autocomplete-overlay:empty {
   display: none;
 }
-
-.autocomplete-wrapper + input[type=submit] {
-  vertical-align: top;
-}

@@ -2,6 +2,7 @@ function PrefixyComplete(input, prefixyUrl, opts={}) {
   this.input = input;
   this.completionsUrl = prefixyUrl + '/completions';
   this.incrementUrl = prefixyUrl + '/increment';
+  this.form = opts.form;
   this.delay = opts.delay || 0;
   this.token = opts.token;
   this.suggestionCount = opts.suggestionCount;
@@ -10,6 +11,7 @@ function PrefixyComplete(input, prefixyUrl, opts={}) {
   this.listUI = null;
   this.overlay = null;
 
+  this.disableHtmlAutocomplete();
   this.wrapInput();
   this.createUI();
   this.valueChanged = this.debounce(this.valueChanged.bind(this), this.delay);
@@ -23,6 +25,14 @@ PrefixyComplete.prototype.bindEvents = function() {
   this.input.addEventListener('blur', this.handleBlur.bind(this));
   this.input.addEventListener('keydown', this.handleKeydown.bind(this));
   this.listUI.addEventListener('mousedown', this.handleMousedown.bind(this));
+
+  if (this.form) {
+    this.form.addEventListener('submit', this.handleSubmit.bind(this));
+  }
+};
+
+PrefixyComplete.prototype.disableHtmlAutocomplete = function() {
+  this.input.setAttribute('autocomplete', 'off');
 };
 
 PrefixyComplete.prototype.wrapInput = function() {
@@ -112,8 +122,8 @@ PrefixyComplete.prototype.fetchSuggestions = function(query, callback) {
 
 PrefixyComplete.prototype.submitCompletion = function() {
   var completion = this.input.value;
+  if (completion.length < this.minChars) { return; }
 
-  this.input.value = '';
   axios.put(this.incrementUrl, { completion, token: this.token });
 };
 
@@ -127,8 +137,11 @@ PrefixyComplete.prototype.handleKeydown = function(event) {
       this.reset();
       break;
     case 'Enter':
-      this.submitCompletion();
-      this.reset();
+      if (!this.form) {
+        this.submitCompletion();
+        this.input.value = '';
+        this.reset();
+      }
       break;
     case 'ArrowUp':
       event.preventDefault();
@@ -173,6 +186,16 @@ PrefixyComplete.prototype.handleMousedown = function(event) {
 };
 
 PrefixyComplete.prototype.handleBlur = function() {
+  if (!this.form) {
+    this.submitCompletion();
+  }
+
+  this.reset();
+};
+
+PrefixyComplete.prototype.handleSubmit = function() {
+  this.submitCompletion();
+  this.input.value = '';
   this.reset();
 };
 
