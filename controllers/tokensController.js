@@ -12,7 +12,7 @@ module.exports = {
       return;
     }
 
-    res.render('token', { token });
+    res.render('token', { token, title: "Token" });
   },
 
   create: function(req, res) {
