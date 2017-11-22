@@ -6,7 +6,7 @@
     "node": "8.8.1"
   },
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "test": "jasmine"
   },
   "dependencies": {

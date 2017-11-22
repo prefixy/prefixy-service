@@ -6,17 +6,13 @@ html
       meta(name="viewport" content="width=device-width, initial-scale=1")
       link(rel="stylesheet" href="/stylesheets/semantic.min.css")
       link(rel="stylesheet" href="/stylesheets/style.css")
-  body
+  body(class="ui container")
     block body
       include partials/_nav
-      block content
+      main(class="ui text container")
+        block content
       include partials/_foot
 
-      //- script(
-      //-   src="https://code.jquery.com/jquery-3.1.1.min.js"
-      //-   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      //-   crossorigin="anonymous"
-      //- )
       script.
         const path = location.pathname;
         const navItem = document.querySelector(`a[href="${path}"]`);

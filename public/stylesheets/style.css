@@ -1,15 +1,13 @@
 body {
-  padding: 12px;
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-.italicized {
-  font-style: italic;
+  position: relative;
+  height: auto;
+  padding: 20px 12px 75px 12px;
 }
 
 .positioned.right {
   position: absolute;
-  right: 50px;
+  right: 10px;
 }
 
 .section.wrapper {
@@ -30,7 +28,7 @@ body {
   }
 
   .ui.container {
-    margin-left: 0!important;
-    margin-right: 0!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
