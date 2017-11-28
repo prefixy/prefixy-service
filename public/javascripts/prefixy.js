@@ -1,4 +1,4 @@
-class PrefixyComplete {
+class Prefixy {
   constructor(input, prefixyUrl, opts={}) {
     this.input = input;
     this.completionsUrl = prefixyUrl + '/completions';
