@@ -98,10 +98,9 @@ append body
     const demoToken = "#{demoToken}";
     const form1 = document.getElementById("demo1-form");
     const input1 = document.getElementById("demo1");
-    const url = "https://prefixy.herokuapp.com";
     const opts = {
       form: form1,
       token: demoToken
     };
 
-    new Prefixy(input1, url, opts);
+    new Prefixy(input1, opts);
