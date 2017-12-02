@@ -32,12 +32,17 @@ body {
   [class*="computer only"]:not(.mobile),
   [class*="large monitor only"]:not(.mobile),
   [class*="widescreen monitor only"]:not(.mobile),
-  [class*="or lower hidden"] {
+  [class*="or lower hidden"],
+  .ui.label {
     display: none !important;
   }
 
   .ui.container {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  .subheading {
+    text-align: left;
   }
 }
