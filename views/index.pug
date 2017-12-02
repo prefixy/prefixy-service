@@ -14,7 +14,7 @@ prepend body
 block content
   .section.wrapper
     h1(class="ui huge centered header") Prefixy
-    p Aliquam placerat sem non tortor condimentum finibus. Cras vehicula tempus velit, in placerat sapien. Cras fermentum ex nulla, ac aliquet metus porttitor nec. Quisque nisl urna, ornare sollicitudin dolor ut, pretium convallis nunc. Aenean volutpat nulla libero, ac finibus tortor iaculis sit amet. Ut fermentum hendrerit dignissim. Praesent quis sem a ipsum lobortis luctus hendrerit sit amet dolor. Fusce venenatis ullamcorper condimentum. Morbi tellus tellus, maximus in varius quis, sollicitudin non mauris. Duis faucibus sagittis posuere.
+    h3(class="subheading") Get google-style autocomplete for your web application in 30 seconds. We handle the hosting for you, so that you can get back to developing your core application. Because autocomplete should just work.
 
   .section.wrapper
     form(
@@ -31,9 +31,9 @@ block content
         )
 
   .section.wrapper
-    h2 What is this even?
-    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-    p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
+    h2 Autocomplete that just works
+    p Prefixy is a hosted prefix search engine that powers autocomplete suggestions for your site. Suggestions dynamically update in response to user input, so your users will only see the most relevant suggestions.
+    p We've already done the hard work of figuring out how to configure and implement a suggestion engine that is performant, useful, and scalable. And we've even written all the front-end scripts you need to get started! Just include them in your code and enjoy instant integration with our back-end remote servers.
 
   .section.wrapper
     form(
@@ -49,12 +49,17 @@ block content
   .section.wrapper
     h2 Tell me the technical details&nbsp;
       i(class="big code icon")
-    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
-    p Vivamus vehicula elementum semper. Sed euismod risus ac mi hendrerit mattis. Quisque eget tincidunt elit. Cras faucibus luctus rutrum. Nulla condimentum imperdiet nibh sit amet sagittis. Suspendisse eget tempus quam. Donec rhoncus lorem urna, sit amet dapibus augue ornare sed.
+    p Prefixy persists data using a prefix hash trie, a cross between a hash and a trie. Suggestions are specifically stored with Redis sorted sets, a native data structure in Redis that is built on top of the skip list. With this powerhouse combination of data structures, we are able to get O(1) lookups. Not too shabby for autocomplete!
+    p Other features:
+    ul
+      li Smart cacheing with Redis keeps high-priority suggestions in memory
+      li MongoDB acts as our fallback and system of record for datasets that are too large to fit in memory
+      li Built-in memory management techniques based on streaming algorithms are invisible to the app developer
+      li Optimal settings like minChars, maxChars, and delay are already configured for you
 
   .section.wrapper
     h2 Show me another demo
-    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Go ahead. Play around with it. Type something, click on the suggestions, and try to submit the form. If you refresh the page, you should see that the suggestion you searched for is in a higher position than before.
 
   .section.wrapper
     form(
@@ -71,7 +76,7 @@ block content
 
   .section.wrapper
     h2 I want to do this myself&nbsp;
-    p Sed facilisis felis posuere dui lacinia laoreet. Curabitur a ex suscipit, bibendum tortor a, gravida turpis. Aliquam eget ante nec purus dictum ultrices eu nec diam. Donec finibus nunc mauris, et placerat enim vestibulum sed. Fusce ante orci, ornare non blandit ac, aliquet vitae neque. Vivamus elit est, efficitur id convallis sit amet, venenatis sit amet lectus. Fusce non facilisis turpis, eu congue neque.
+    p Do you have a particular use case that requires more granular control? While we plan to expose configurable options to app developers in the future, we have open sourced all the technology behind Prefixy. Fork or clone our Github repo and you can start customizing Prefixy for your own use case today.
 
   .section.wrapper
     .ui.center.aligned.container

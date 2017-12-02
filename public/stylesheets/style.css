@@ -15,6 +15,15 @@ body {
   margin-bottom: 45px;
 }
 
+.subheading {
+  max-width: 550px;
+  margin: 0 auto;
+  font-style: oblique;
+  font-weight: lighter;
+  text-align: justify;
+  font-size: 1.6rem;
+}
+
 /* Mobile */
 
 @media only screen and (max-width: 767px) {
