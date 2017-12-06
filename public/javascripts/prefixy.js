@@ -150,7 +150,7 @@ class Prefixy {
   handleMousedown() {
     event.preventDefault();
 
-    const element = event.target;
+    let element = event.target;
 
     if (event.target.classList.contains('suggestion')) {
       element = element.parentNode;
