@@ -1,10 +1,10 @@
 const PREFIXY_URL = "https://prefixy.herokuapp.com";
 
 class Prefixy {
-  constructor(input, opts={}) {
-    this.input = input;
+  constructor(opts={}) {
     this.completionsUrl = PREFIXY_URL + '/completions';
     this.incrementUrl = PREFIXY_URL + '/increment';
+    this.input = opts.input;
     this.form = opts.form;
     this.delay = opts.delay || 0;
     this.token = opts.token;

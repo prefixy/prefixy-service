@@ -100,14 +100,15 @@ block content
 
 append body
   script(src="https://unpkg.com/axios/dist/axios.min.js")
-  script(src="/javascripts/prefixy.js")
+  script(src="/prefixy.js")
   script.
     const demoToken = "#{demoToken}";
     const form1 = document.getElementById("demo1-form");
     const input1 = document.getElementById("demo1");
     const opts = {
+      input: input1,
       form: form1,
       token: demoToken
     };
 
-    new Prefixy(input1, opts);
+    new Prefixy(opts);
