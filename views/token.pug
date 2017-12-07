@@ -1,0 +1,121 @@
+extends layout
+
+append head
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css")
+
+block content
+  .section.wrapper
+    h2(class="ui centered header") And your token is...
+
+  .section.wrapper
+    .ui.form
+      .ui.field
+        textarea(readonly rows="3")= token
+        small *Don't lose this token, and remember to bookmark this page in case you need to come back.
+
+  .section.wrapper
+    h2 Setup
+
+  .section.wrapper
+    p
+      a(
+        target="_blank"
+        href="https://github.com/axios/axios"
+      ) Axios 
+      | is a required dependency. You can include the CDN for it with this script:
+
+  .section.wrapper
+    pre
+      code(class="language-js") &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;
+
+  .section.wrapper
+    p After axios, include the Prefixy script:
+
+  .section.wrapper
+    pre
+      code(class="language-js") &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;
+
+  .section.wrapper
+    p Then create a new instance of Prefixy with your input field and token. For example:
+
+  .section.wrapper
+    pre
+      code(class="language-js")
+        | &lt;script&gt;
+        |   var myInput = document.getElementById(‘my-input’);
+        | 
+        |   new Prefixy({
+        |     input: myInput,
+        |     token: #{token}
+        |   });
+        | &lt;/script&gt;
+
+  .section.wrapper
+    p If your input is part of a form, make sure that the form element is also included in the options:
+
+  .section.wrapper
+    pre
+      code(class="language-js")
+        | &lt;script&gt;
+        |   var myInput = document.getElementById(‘my-input’);
+        |   var myForm = document.getElementById(‘my-form’);
+        |
+        |   new Prefixy({
+        |     input: myInput,
+        |     form: myForm,
+        |     token: #{token}
+        |   });
+        | &lt;/script&gt;
+
+  .section.wrapper
+    h2 Additional options
+
+  .section.wrapper
+    dl
+      dt: em suggestionCount
+      dd The maximum number of suggestions that should be displayed at any one time to the user as they type. Defaults to 5 if not specified.
+      dt: em minChars
+      dd The minimum number of characters a user must enter before suggestions are displayed. Defaults to 1 if not specified.
+      dt: em delay
+      dd The amount of time, in milliseconds, to wait after a character has been typed, before sending a request for suggestions. Defaults to 0 if not specified.
+
+  .section.wrapper
+    h2 Full Example
+    p Here’s an example of including the scripts in your html with all of the options specified:
+
+  .section.wrapper
+    pre
+      code(class="language-js")
+        | &lt;html&gt;
+        |   &lt;body&gt;
+        |
+        |     ...
+        |
+        |     &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;
+        |     &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;
+        |     &lt;script&gt;
+        |       var myInput = document.getElementById(‘my-input’);
+        |       var myForm = document.getElementById(‘my-form’);
+        |    
+        |       new Prefixy({
+        |         input: myInput,
+        |         form: myForm,
+        |         token: #{token},
+        |         suggestionCount: 5,
+        |         minChars: 1,
+        |         delay: 50
+        |       });
+        |     &lt;/script&gt;
+        |   &lt;/body&gt;
+        | &lt;/html&gt;
+
+  .section.wrapper
+    h2 You're all set!
+    p If you need more help, see our
+      a(
+        target="_blank"
+        href="https://github.com/jayshenk/prefixy/tree/master/docs"
+      )  documentation on github here.
+
+append body
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js")

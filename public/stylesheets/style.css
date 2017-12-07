@@ -1,8 +1,48 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: relative;
+  height: auto;
+  padding: 20px 12px 75px 12px;
 }
 
-a {
-  color: #00B7FF;
+.positioned.right {
+  position: absolute;
+  right: 10px;
+}
+
+.section.wrapper {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.subheading {
+  max-width: 550px;
+  margin: 0 auto;
+  font-style: oblique;
+  font-weight: lighter;
+  text-align: justify;
+  font-size: 1.6rem;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+  [class*="mobile hidden"],
+  [class*="tablet only"]:not(.mobile),
+  [class*="computer only"]:not(.mobile),
+  [class*="large monitor only"]:not(.mobile),
+  [class*="widescreen monitor only"]:not(.mobile),
+  [class*="or lower hidden"],
+  .ui.label {
+    display: none !important;
+  }
+
+  .ui.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .subheading {
+    text-align: left;
+  }
 }

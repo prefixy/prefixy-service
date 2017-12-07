@@ -1,7 +1,19 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    block head
+      title Prefixy | #{title}
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      link(rel="stylesheet" href="/stylesheets/semantic.min.css")
+      link(rel="stylesheet" href="/stylesheets/style.css")
+  body(class="ui container")
+    block body
+      include partials/_nav
+      main(class="ui text container")
+        block content
+      include partials/_foot
+
+      script.
+        const path = location.pathname;
+        const navItem = document.querySelector(`a[href="${path}"]`);
+        navItem.className += " active";
