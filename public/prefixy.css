@@ -12,6 +12,7 @@
 
 .autocomplete-ui {
   position: absolute;
+  z-index: 99;
   list-style: none;
   padding: 0px;
   right: 0;

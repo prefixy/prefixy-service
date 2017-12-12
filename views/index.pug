@@ -1,7 +1,7 @@
 extends layout
 
 append head
-  link(rel="stylesheet" href="/stylesheets/autocomplete.css")
+  link(rel="stylesheet" href="/prefixy.css")
 
 prepend body
   form(class="mobile hidden positioned right" method="post" action="/tokens")
@@ -14,7 +14,7 @@ prepend body
 block content
   .section.wrapper
     h1(class="ui huge centered header") Prefixy
-    h3(class="subheading") Need a dynamic google-style autocomplete for your web application? Get up and running with our service in 30 seconds. We'll handle the hosting for you, so that you can get back to developing your core application. Because autocomplete should just work.
+    h3(class="subheading") Need a dynamic google-style autocomplete for your web application? Get up and running with our service in just a few minutes. We'll handle the hosting for you, so that you can get back to developing your core application. Because autocomplete should just work.
 
   .section.wrapper
     form(
@@ -64,6 +64,7 @@ block content
 
   .section.wrapper
     form(
+      id="demo2-form"
       class="ui center aligned container"
       action="#"
       onsubmit="return false;"
@@ -76,28 +77,6 @@ block content
           placeholder="Start typing..."
         )
 
-  .section.wrapper
-    h2 I want to do this myself&nbsp;
-    p Do you have a particular use case that requires more granular control? While we plan to expose configurable options to app developers in the future, we have open sourced all the technology behind Prefixy. Fork or clone our Github repo and you can start customizing Prefixy for your own use case today.
-
-  .section.wrapper
-    .ui.center.aligned.container
-      .ui.stackable.three.column.grid
-        .column
-          a(
-            class="big fluid ui button"
-            download
-            href="https://github.com/walidwahed/prefixy-lib/archive/master.zip"
-          ) Download Zip
-        .column
-          a(
-            class="big fluid ui button"
-            target="_blank"
-            href="https://github.com/walidwahed/prefixy-lib"
-          ) View Github
-        .column
-          i(class="huge fork icon")
-
 append body
   script(src="https://unpkg.com/axios/dist/axios.min.js")
   script(src="/prefixy.js")
@@ -105,10 +84,15 @@ append body
     const demoToken = "#{demoToken}";
     const form1 = document.getElementById("demo1-form");
     const input1 = document.getElementById("demo1");
-    const opts = {
+    const form2 = document.getElementById("demo2-form");
+    const input2 = document.getElementById("demo2");
+    const demo1 = new Prefixy({
       input: input1,
       form: form1,
       token: demoToken
-    };
-
-    new Prefixy(opts);
+    });
+    const demo2 = new Prefixy({
+      input: input2,
+      form: form2,
+      token: demoToken
+    });

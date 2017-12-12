@@ -17,6 +17,13 @@ block content
     h2 Setup
 
   .section.wrapper
+    p Include the Prefixy CSS in your project.
+
+  .section.wrapper
+    pre
+      code(class="language-html") &lt;link rel=&quotstylesheet&quot; href=&quot;http://prefixy.io/prefixy.css&quot;&gt;
+
+  .section.wrapper
     p
       a(
         target="_blank"
@@ -26,21 +33,21 @@ block content
 
   .section.wrapper
     pre
-      code(class="language-js") &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;
+      code(class="language-html") &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
 
   .section.wrapper
     p After axios, include the Prefixy script:
 
   .section.wrapper
     pre
-      code(class="language-js") &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;
+      code(class="language-html") &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;&lt;/script&gt;
 
   .section.wrapper
     p Then create a new instance of Prefixy with your input field and token. For example:
 
   .section.wrapper
     pre
-      code(class="language-js")
+      code(class="language-html")
         | &lt;script&gt;
         |   var myInput = document.getElementById(‘my-input’);
         | 
@@ -55,7 +62,7 @@ block content
 
   .section.wrapper
     pre
-      code(class="language-js")
+      code(class="language-html")
         | &lt;script&gt;
         |   var myInput = document.getElementById(‘my-input’);
         |   var myForm = document.getElementById(‘my-form’);
@@ -85,14 +92,18 @@ block content
 
   .section.wrapper
     pre
-      code(class="language-js")
+      code(class="language-html")
         | &lt;html&gt;
+        |   &lt;head&gt;
+        |     ...
+        |     &lt;link rel=&quotstylesheet&quot; href=&quot;http://prefixy.io/prefixy.css&quot;&gt;
+        |   &lt;/head&gt;
         |   &lt;body&gt;
         |
         |     ...
         |
-        |     &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;
-        |     &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;
+        |     &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+        |     &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;&lt;/script&gt;
         |     &lt;script&gt;
         |       var myInput = document.getElementById(‘my-input’);
         |       var myForm = document.getElementById(‘my-form’);
