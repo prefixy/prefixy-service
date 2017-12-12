@@ -170,7 +170,8 @@ class Prefixy {
     this.reset();
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     this.submitCompletion();
     this.input.value = '';
     this.reset();
