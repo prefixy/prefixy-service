@@ -21,7 +21,7 @@ block content
 
   .section.wrapper
     pre
-      code(class="language-html") &lt;link rel=&quotstylesheet&quot; href=&quot;http://prefixy.io/prefixy.css&quot;&gt;
+      code(class="language-html") &lt;link rel=&quotstylesheet&quot; href=&quot;https://www.prefixy.io/prefixy.css&quot;&gt;
 
   .section.wrapper
     p
@@ -40,7 +40,7 @@ block content
 
   .section.wrapper
     pre
-      code(class="language-html") &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;&lt;/script&gt;
+      code(class="language-html") &lt;script src=&quot;https://www.prefixy.io/prefixy.js&quot;&gt;&lt;/script&gt;
 
   .section.wrapper
     p Then create a new instance of Prefixy with your input field and token. For example:
@@ -49,11 +49,11 @@ block content
     pre
       code(class="language-html")
         | &lt;script&gt;
-        |   var myInput = document.getElementById(‘my-input’);
+        |   var myInput = document.getElementById('my-input');
         | 
         |   new Prefixy({
         |     input: myInput,
-        |     token: #{token}
+        |     token: &quot;#{token}&quot;
         |   });
         | &lt;/script&gt;
 
@@ -64,13 +64,13 @@ block content
     pre
       code(class="language-html")
         | &lt;script&gt;
-        |   var myInput = document.getElementById(‘my-input’);
-        |   var myForm = document.getElementById(‘my-form’);
+        |   var myInput = document.getElementById('my-input');
+        |   var myForm = document.getElementById('my-form');
         |
         |   new Prefixy({
         |     input: myInput,
         |     form: myForm,
-        |     token: #{token}
+        |     token: &quot;#{token}&quot;
         |   });
         | &lt;/script&gt;
 
@@ -96,7 +96,7 @@ block content
         | &lt;html&gt;
         |   &lt;head&gt;
         |     ...
-        |     &lt;link rel=&quotstylesheet&quot; href=&quot;http://prefixy.io/prefixy.css&quot;&gt;
+        |     &lt;link rel=&quotstylesheet&quot; href=&quot;https://www.prefixy.io/prefixy.css&quot;&gt;
         |   &lt;/head&gt;
         |   &lt;body&gt;
         |
@@ -105,13 +105,13 @@ block content
         |     &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
         |     &lt;script src=&quot;https://prefixy.io/prefixy.js&quot;&gt;&lt;/script&gt;
         |     &lt;script&gt;
-        |       var myInput = document.getElementById(‘my-input’);
-        |       var myForm = document.getElementById(‘my-form’);
+        |       var myInput = document.getElementById('my-input');
+        |       var myForm = document.getElementById('my-form');
         |    
         |       new Prefixy({
         |         input: myInput,
         |         form: myForm,
-        |         token: #{token},
+        |         token: &quot;#{token}&quot;,
         |         suggestionCount: 5,
         |         minChars: 1,
         |         delay: 50
