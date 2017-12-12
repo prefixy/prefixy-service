@@ -75,6 +75,22 @@ block content
           placeholder="Start typing..."
         )
 
+  .section.wrapper
+    h2 Contribute
+    p Prefixy is an open source project and we welcome contributions from the community.
+
+  .section.wrapper
+    .ui.center.aligned.container
+      .ui.stackable.three.column.grid
+        .column
+          a(
+            class="big fluid ui button"
+            target="_blank"
+            href="https://github.com/prefixy/prefixy"
+          ) Prefixy Github
+        .column
+          i(class="huge fork icon")
+
 append body
   script(src="https://unpkg.com/axios/dist/axios.min.js")
   script(src="/prefixy.js")

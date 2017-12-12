@@ -24,10 +24,6 @@ body {
   font-size: 1.6rem;
 }
 
-#demo2-form {
-  padding-bottom: 300px;
-}
-
 /* Mobile */
 
 @media only screen and (max-width: 767px) {
