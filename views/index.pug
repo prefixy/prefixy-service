@@ -18,8 +18,23 @@ block content
   .section.wrapper
     h1(class="ui huge centered header") prefixy
 
+  //- .section.wrapper
+  //-   h3(class="subheading")
+
+  //- .section.wrapper
+  //-   .ui.form
+  //-     .ui.field
+  //-       textarea(class="subheading" readonly rows="3")
+
   .section.wrapper
-    h3(class="subheading")
+    .text-editor-wrap
+      .title-bar
+        span(class="title terminal-height") prefixy - bash - 80x10
+      .text-body
+        | $
+        |
+        span(class="typed")
+
 
   .section.wrapper
     form(
@@ -126,13 +141,23 @@ append body
   script(src="/javascripts/typed.min.js")
   script.
     const part1 = `Need a dynamic google-style autocomplete for your web application?`;
-    const part2 = `Get up and running with our service in just a few minutes. We handle the hosting for you, so that you can get back to developing your core application logic.`;
-    const part3 = `Because autocomplete should just work. ^500 Check out our demo below!`;
+    const part2 = `Get up and running with our service in just a few minutes.`;
+    const part3 = `We handle the hosting for you, so that you can get back to developing your core application logic.`
+    const part4 = `Because autocomplete should just work. ^500 Check out our demo below!`;
 
-    var typed = new Typed('.subheading', {
-      strings: [part1, part2, part3],
+    var typed = new Typed('.typed', {
+      strings: [part1, part2, part3, part4],
       typeSpeed: 50,
-      showCursor: false
+      showCursor: false,
+      onComplete: (self) => {
+        const form1 = $("#demo1-form");
+        form1.fadeIn();
+
+        //- const textBody = $(".text-body");
+        //- textBody.animate(({
+        //-   height: "110px"
+        //- }));
+      }
     });
 
     const text = `Need a dynamic google-style autocomplete for your web application? Get up and running with our service in just a few minutes. We handle the hosting for you, so that you can get back to developing your core application logic. Because autocomplete should just work.`;
