@@ -5,14 +5,7 @@ append head
 
 block menu
   nav(class="ui inverted menu")
-    a(class="item" href="/") Home
-    a(class="item" href="/about") About
-    a(class="item" href="http://prefixy.github.io" target="_blank") Story
-    a(
-      class="item"
-      href="https://github.com/prefixy/prefixy"
-      target="_blank"
-    ) Source
+    include partials/_nav_items.pug
     .right.menu
       form(class="mobile hidden item" method="post" action="/tokens")
         input(
@@ -24,7 +17,9 @@ block menu
 block content
   .section.wrapper
     h1(class="ui huge centered header") prefixy
-    h3(class="subheading") Need a dynamic google-style autocomplete for your web application? Get up and running with our service in just a few minutes. We handle the hosting for you, so that you can get back to developing your core application logic. Because autocomplete should just work.
+
+  .section.wrapper
+    h3(class="subheading")
 
   .section.wrapper
     form(
@@ -63,7 +58,7 @@ block content
     p Other features:
     ul
       li High-priority suggestions are kept in memory in our Redis data store
-      li Long-tail data is stored in MongoDB, for tenants whose datasets are too large to fit entirely in memory
+      li Long-tail data suggestions are stored in MongoDB, for tenants whose datasets are too large to fit entirely in memory
       li Built-in memory management techniques based on streaming algorithms are invisible to the app developer
       li Optimal settings like minChars, maxChars, and delay are already configured for you
 
@@ -113,13 +108,31 @@ append body
     const input1 = document.getElementById("demo1");
     const form2 = document.getElementById("demo2-form");
     const input2 = document.getElementById("demo2");
+
     const demo1 = new Prefixy({
       input: input1,
       form: form1,
       token: demoToken
     });
+
     const demo2 = new Prefixy({
       input: input2,
       form: form2,
       token: demoToken
     });
+
+  script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous")
+  script(src="/javascripts/typed.min.js")
+  script.
+    const part1 = `Need a dynamic google-style autocomplete for your web application?`;
+    const part2 = `Get up and running with our service in just a few minutes. We handle the hosting for you, so that you can get back to developing your core application logic.`;
+    const part3 = `Because autocomplete should just work. ^500 Check out our demo below!`;
+
+    var typed = new Typed('.subheading', {
+      strings: [part1, part2, part3],
+      typeSpeed: 50,
+      showCursor: false
+    });
+
+    const text = `Need a dynamic google-style autocomplete for your web application? Get up and running with our service in just a few minutes. We handle the hosting for you, so that you can get back to developing your core application logic. Because autocomplete should just work.`;

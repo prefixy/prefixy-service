@@ -12,6 +12,7 @@ body {
   left: 0;
   right: 0;
   z-index: 11;
+  border-radius: 0;
 }
 
 .ui.text.container {
@@ -30,9 +31,9 @@ body {
 }
 
 .subheading {
-  max-width: 550px;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  max-width: 500px;
   margin: 0 auto;
-  font-style: oblique;
   font-weight: lighter;
   text-align: justify;
   font-size: 1.6rem;
