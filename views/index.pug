@@ -9,7 +9,7 @@ block menu
     .right.menu
       form(class="mobile hidden item" method="post" action="/tokens")
         input(
-          class="ui teal button"
+          class="ui primary button"
           type="submit"
           value="Auto-generate now!"
         )
@@ -58,7 +58,7 @@ block content
     p Other features:
     ul
       li High-priority suggestions are kept in memory in our Redis data store
-      li Long-tail data suggestions are stored in MongoDB, for tenants whose datasets are too large to fit entirely in memory
+      li Long-tail suggestions are stored in MongoDB, for tenants whose datasets are too large to fit entirely in memory
       li Built-in memory management techniques based on streaming algorithms are invisible to the app developer
       li Optimal settings like minChars, maxChars, and delay are already configured for you
 
