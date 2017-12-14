@@ -1,8 +1,22 @@
 body {
+  background: black;
+  background-image: linear-gradient(white, white);
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
   position: relative;
-  height: auto;
-  padding: 20px 12px 75px 12px;
+  padding: 0 12px 75px 12px;
+}
+
+.ui.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+}
+
+.ui.text.container {
+  padding-top: 100px;
+  min-height: 100%;
 }
 
 .positioned.right {
@@ -22,6 +36,15 @@ body {
   font-weight: lighter;
   text-align: justify;
   font-size: 1.6rem;
+}
+
+.ui.footer.segment {
+  margin: 100px -12px -50px -12px;
+  color: rgba(255,255,255,.9);
+}
+
+.ui.inverted.black.segment {
+  color: rgba(255,255,255,.9);
 }
 
 /* Mobile */

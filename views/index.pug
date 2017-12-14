@@ -3,18 +3,28 @@ extends layout
 append head
   link(rel="stylesheet" href="/prefixy.css")
 
-prepend body
-  form(class="mobile hidden positioned right" method="post" action="/tokens")
-    input(
-      class="ui primary basic button"
-      type="submit"
-      value="Auto-generate now!"
-    )
+block menu
+  nav(class="ui inverted menu")
+    a(class="item" href="/") Home
+    a(class="item" href="/about") About
+    a(class="item" href="http://prefixy.github.io" target="_blank") Story
+    a(
+      class="item"
+      href="https://github.com/prefixy/prefixy"
+      target="_blank"
+    ) Source
+    .right.menu
+      form(class="mobile hidden item" method="post" action="/tokens")
+        input(
+          class="ui teal button"
+          type="submit"
+          value="Auto-generate now!"
+        )
 
 block content
   .section.wrapper
-    h1(class="ui huge centered header") Prefixy
-    h3(class="subheading") Need a dynamic google-style autocomplete for your web application? Get up and running with our service in just a few minutes. We'll handle the hosting for you, so that you can get back to developing your core application. Because autocomplete should just work.
+    h1(class="ui huge centered header") prefixy
+    h3(class="subheading") Need a dynamic google-style autocomplete for your web application? Get up and running with our service in just a few minutes. We handle the hosting for you, so that you can get back to developing your core application logic. Because autocomplete should just work.
 
   .section.wrapper
     form(
@@ -49,17 +59,17 @@ block content
   .section.wrapper
     h2 Tell me the technical details&nbsp;
       i(class="big code icon")
-    p Prefixy persists data using a prefix hash trie, a cross between a hash and a trie. Suggestions are specifically stored with Redis sorted sets, a native data structure in Redis that is built on top of the skip list. With this powerhouse combination of data structures, we are able to get O(1) lookups. Not too shabby for autocomplete!
+    p Prefixy persists data using a prefix hash trie, a cross between a hash and a trie. Suggestions are specifically stored with Redis sorted sets, a native data structure in Redis that is built on top of the skip list. With this combination of data structures, we are able to return suggestions in O(1) time. Not too shabby for autocomplete!
     p Other features:
     ul
-      li Smart cacheing with Redis keeps high-priority suggestions in memory
-      li MongoDB acts as our fallback and system of record for datasets that are too large to fit in memory
+      li High-priority suggestions are kept in memory in our Redis data store
+      li Long-tail data is stored in MongoDB, for tenants whose datasets are too large to fit entirely in memory
       li Built-in memory management techniques based on streaming algorithms are invisible to the app developer
       li Optimal settings like minChars, maxChars, and delay are already configured for you
 
   .section.wrapper
     h2 Show me another demo
-    p Go ahead. Play around with it. Type something, click on a suggestion or continue typing something new, and press Enter. Depending on the ranking of other suggestions, the next time you type you may see the suggestion you searched for in a higher position than before, or as a brand new suggestion.
+    p Go ahead. Play around with it. Type something, click on a suggestion, or continue typing something new, and press Enter. Depending on the ranking of other suggestions, the next time you type, you may see the suggestion you searched for in a higher position than before, or as a brand new suggestion.
 
   .section.wrapper
     form(
@@ -76,20 +86,23 @@ block content
         )
 
   .section.wrapper
-    h2 Contribute
-    p Prefixy is an open source project and we welcome contributions from the community.
+    p Don't see it? It may just be that the suggestion doesn't have a high enough score yet relative to other suggestions. If you keep typing though, you should see it pop up. For instance, if you selected "charizard is awesome", you'll have a greater chance of seeing it pop up in the dropdown if you type "charizard" in the input field rather than just "c". Pretty neat right?
 
-  .section.wrapper
-    .ui.center.aligned.container
-      .ui.stackable.three.column.grid
-        .column
-          a(
-            class="big fluid ui button"
-            target="_blank"
-            href="https://github.com/prefixy/prefixy"
-          ) Prefixy Github
-        .column
-          i(class="huge fork icon")
+  //- .section.wrapper
+  //-   h2 Contribute
+  //-   p Prefixy is an open source project and we welcome contributions from the community.
+
+  //- .section.wrapper
+  //-   .ui.center.aligned.container
+  //-     .ui.stackable.three.column.grid
+  //-       .column
+  //-         a(
+  //-           class="big fluid ui button"
+  //-           target="_blank"
+  //-           href="https://github.com/prefixy/prefixy"
+  //-         ) Prefixy Github
+  //-       .column
+  //-         i(class="huge fork icon")
 
 append body
   script(src="https://unpkg.com/axios/dist/axios.min.js")
