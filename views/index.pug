@@ -70,7 +70,8 @@ block content
       class="ui center aligned container"
       action="#"
     )
-      .ui.large.input
+      .ui.labeled.large.input
+        .ui.label Demo:
         input(
           id="demo2"
           type="search"
@@ -98,7 +99,7 @@ block content
 
 append body
   script(src="https://unpkg.com/axios/dist/axios.min.js")
-  script(src="/prefixy-es5.js")
+  script(src="/prefixy.js")
   script.
     const demoToken = "#{demoToken}";
     const form1 = document.getElementById("demo1-form");
