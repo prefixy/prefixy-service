@@ -7,7 +7,8 @@
   },
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "jasmine"
+    "test": "jasmine",
+    "build": "babel public/prefixy.js -o public/prefixy-es5.js"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -23,6 +24,8 @@
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "nodemon": "^1.12.1"
   }
 }
